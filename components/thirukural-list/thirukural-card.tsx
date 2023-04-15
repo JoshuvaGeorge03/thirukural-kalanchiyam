@@ -1,5 +1,6 @@
 import { Fragment } from "react"
 import type { KuralEntity } from "../../thirukural-types/types"
+import styles from './Card.module.css';
 
 
 function CardHeader({ children }: {
@@ -13,7 +14,7 @@ function CardHeader({ children }: {
 function CardContent({ children }: {
     children: React.ReactNode
 }) {
-    return <section>
+    return <section className={styles.cardHeader}>
         {children}
     </section>
 }
@@ -26,7 +27,7 @@ const CardFooter: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
 function Card({ children }: { children: React.ReactElement[] }) {
     return (
-        <div>
+        <div className={styles.card}>
             {children}
         </div>
     )
@@ -34,12 +35,8 @@ function Card({ children }: { children: React.ReactElement[] }) {
 
 function ThirukuralPre({ firstLine, secondLine }: { firstLine: string, secondLine: string }) {
     return <pre>
-        {
-            `
-            ${firstLine}
-            ${secondLine}
-        `
-        }
+        {`${firstLine}
+${secondLine}`}
     </pre>
 }
 

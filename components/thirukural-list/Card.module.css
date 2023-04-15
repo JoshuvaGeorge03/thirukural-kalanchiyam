@@ -1,0 +1,7 @@
+.card {
+    display: flex;
+    align-items: center;
+}
+.cardHeader {
+    padding: 0 2rem;
+}

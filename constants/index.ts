@@ -1,0 +1,1 @@
+export const websiteHeaderName = 'திருக்குறள் களஞ்சியம்';

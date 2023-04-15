@@ -9,10 +9,11 @@ import ThirukuralSearchBox from '../components/thirukural-search/ThriukrualSearc
 
 // config imports
 import { CONFIG } from '../server.config';
+import ThriukuralHeader from '../components/Header/Header';
 
 
 function Home({ thirukurals }: { thirukurals: KuralEntity[] }) {
-    console.log('http://localhost:3000', thirukurals);
+    // console.log('http://localhost:3000', thirukurals);
 
     const [kurals, setKurals] = useState(() => thirukurals);
 
@@ -34,14 +35,9 @@ function Home({ thirukurals }: { thirukurals: KuralEntity[] }) {
 
     return (
         <>
-            <header>
-                <nav>
-                    <h1>
-                        திருக்குறள் களஞ்சியம்
-                    </h1>
-                </nav>
+            <ThriukuralHeader>
                 <ThirukuralSearchBox onSearch={handleSearch} />
-            </header>
+            </ThriukuralHeader>
             <main>
                 <section>
                     <ThriukuralLists thrikurals={kurals} />

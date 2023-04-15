@@ -1,4 +1,5 @@
 import Input from "../input/Input";
+import styles from './Search.module.css';
 
 
 type SearchBoxProps = {
@@ -13,7 +14,7 @@ export function SearchBox({onChange, placeholder}: SearchBoxProps) {
     }
 
     return (
-        <Input type={'search'} onChange={handleChange} placeholder="search me" />
+        <Input className={styles.searchInput} type={'search'} onChange={handleChange} placeholder="search me" />
     );
 }
 
